@@ -32,4 +32,6 @@ gem 'mysql2'
    gem 'rspec-rails'
    gem 'pickle'
    gem 'database_cleaner'
+   gem 'launchy'
+   gem 'akephalos'
  end
