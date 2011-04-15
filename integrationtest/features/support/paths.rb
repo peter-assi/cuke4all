@@ -14,6 +14,8 @@ module NavigationHelpers
       '/owners/search'
     when /enter owner/
       '/owners/new'
+    when /veterinarians/
+      '/vets'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
