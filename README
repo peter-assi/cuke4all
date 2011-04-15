@@ -1,7 +1,32 @@
 Contents:
 
 petclinic/ - A clone of the spring petclinic example app 
-integrationtest/ - A rails project setup to test petclinic web app
+integrationtest/ - A rails project setup to test the petclinic web app
+
+Prerequisites:
+- Ruby (best installed with RVM http://rvm.beginrescueend.com)
+- rails and bundler gems (gem install bundler rails)
+- Java (go ask Oracle)
+
+To get petclinic running you need to create a database
+# mysql -u root
+create database petclinic;
+
+If your root user have a password or if you use another login you need to edit the files
+- petclinic/src/main/resources/jdbc.properties
+- integrationtest/config/database.yml
+
+The Java server can be started by typing
+# cd petclinic
+# mvn jetty:run
+
+The test can be run by typing
+# cd integrationtest
+# rake cucumber
+
+If you want to use a headless browser edit integrationtest/features/support/env.rb and comment out the line with :selenium and uncomment the line with :akephalos
+
+
 
 
 
