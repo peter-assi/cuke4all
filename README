@@ -1,24 +1,29 @@
 Contents:
 
-petclinic/ - A clone of the spring petclinic example app 
+petclinic/ - A generated Spring Roo sample, Roo can be downloaded at
+http://s3.amazonaws.com/dist.springframework.org/release/ROO/spring-roo-1.1.3.RELEASE.zip
+The app was generated with 
+roo> script --file clinic.roo
+
 integrationtest/ - A rails project setup to test the petclinic web app
 
 Prerequisites:
 - Ruby (best installed with RVM http://rvm.beginrescueend.com)
 - rails and bundler gems (gem install bundler rails)
 - Java (go ask Oracle)
+- Maven
 
 To get petclinic running you need to create a database
 # mysql -u root
 create database petclinic;
 
 If your root user have a password or if you use another login you need to edit the files
-- petclinic/src/main/resources/jdbc.properties
+- petclinic/src/main/resources/META-INF/spring/database.properties
 - integrationtest/config/database.yml
 
 The Java server can be started by typing
 # cd petclinic
-# mvn jetty:run
+# mvn tomcat:run
 
 The test can be run by typing
 # cd integrationtest
