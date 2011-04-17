@@ -1,2 +1,2 @@
-class Owner < ActiveRecord::Base
+class Owner < AbstractPerson
 end

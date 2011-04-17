@@ -1,2 +1,2 @@
-class Vet < ActiveRecord::Base
+class Vet < AbstractPerson
 end
