@@ -12,60 +12,41 @@
 
 ActiveRecord::Schema.define(:version => 0) do
 
-  create_table "owners", :force => true do |t|
-    t.string "first_name", :limit => 30
-    t.string "last_name",  :limit => 30
-    t.string "address"
-    t.string "city",       :limit => 80
-    t.string "telephone",  :limit => 20
+  create_table "abstract_person", :force => true do |t|
+    t.string   "dtype",          :limit => 31, :null => false
+    t.string   "address",        :limit => 50, :null => false
+    t.datetime "birth_day",                    :null => false
+    t.string   "city",           :limit => 30, :null => false
+    t.string   "email",          :limit => 30
+    t.string   "first_name",     :limit => 30
+    t.string   "home_page",      :limit => 30
+    t.string   "last_name",      :limit => 30, :null => false
+    t.string   "telephone",                    :null => false
+    t.integer  "version"
+    t.datetime "employed_since"
+    t.integer  "specialty"
   end
 
-  add_index "owners", ["last_name"], :name => "last_name"
-
-  create_table "pets", :force => true do |t|
-    t.string  "name",       :limit => 30
-    t.date    "birth_date"
-    t.integer "type_id",                  :null => false
-    t.integer "owner_id",                 :null => false
+  create_table "pet", :force => true do |t|
+    t.string  "name",                        :null => false
+    t.binary  "send_reminders", :limit => 1, :null => false
+    t.integer "type",                        :null => false
+    t.integer "version"
+    t.float   "weight",                      :null => false
+    t.integer "owner",          :limit => 8
   end
 
-  add_index "pets", ["name"], :name => "name"
-  add_index "pets", ["owner_id"], :name => "owner_id"
-  add_index "pets", ["type_id"], :name => "type_id"
+  add_index "pet", ["owner"], :name => "FK1B11FE8E4E5BC"
 
-  create_table "specialties", :force => true do |t|
-    t.string "name", :limit => 80
+  create_table "visit", :force => true do |t|
+    t.string   "description"
+    t.integer  "version"
+    t.datetime "visit_date",               :null => false
+    t.integer  "pet",         :limit => 8, :null => false
+    t.integer  "vet",         :limit => 8
   end
 
-  add_index "specialties", ["name"], :name => "name"
-
-  create_table "types", :force => true do |t|
-    t.string "name", :limit => 80
-  end
-
-  add_index "types", ["name"], :name => "name"
-
-  create_table "vet_specialties", :id => false, :force => true do |t|
-    t.integer "vet_id",       :null => false
-    t.integer "specialty_id", :null => false
-  end
-
-  add_index "vet_specialties", ["specialty_id"], :name => "specialty_id"
-  add_index "vet_specialties", ["vet_id", "specialty_id"], :name => "vet_id", :unique => true
-
-  create_table "vets", :force => true do |t|
-    t.string "first_name", :limit => 30
-    t.string "last_name",  :limit => 30
-  end
-
-  add_index "vets", ["last_name"], :name => "last_name"
-
-  create_table "visits", :force => true do |t|
-    t.integer "pet_id",      :null => false
-    t.date    "visit_date"
-    t.string  "description"
-  end
-
-  add_index "visits", ["pet_id"], :name => "pet_id"
+  add_index "visit", ["pet"], :name => "FK6B04D4B6B108014"
+  add_index "visit", ["vet"], :name => "FK6B04D4B6B10AD20"
 
 end
