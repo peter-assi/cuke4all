@@ -9,13 +9,15 @@ module NavigationHelpers
     case page_name
 
     when /the home\s?page/
-      '/'
-    when /owner search/
-      '/owners/search'
+      '/petclinic'
+    when /list owners/
+      '/petclinic/owners/'
     when /enter owner/
-      '/owners/new'
+      '/petclinic/owners?form'
     when /veterinarians/
-      '/vets'
+      '/petclinic/vets'
+    when /find pets/
+      '/petclinic/pets?find=ByTypeAndNameLike&form'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

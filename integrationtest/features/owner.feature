@@ -1,24 +1,20 @@
 Feature: Manage owners                                                      
 
-  Scenario: Navigate to the owners page
-    Given I am on the home page
-    When I follow "Find owner"
-    Then I should see "Find Owners"
-
-  Scenario: Find owner
-    Given an owner exists with first_name: "Dan", last_name: "North"
-    When I am on the owner search page
-    And I fill in "lastName" with "North"
-    And I press "Find Owners"
-    Then I should see "Dan North"
+  Scenario: View owner
+    Given an owner exists with first_name: "Dan", last_name: "North", address: "Windsor Castle", city: "Berkshire", birth_day: "19700101", telephone: "123456"
+    When I am on the list owners page
+    Then I should see "Dan"
+    And I should see "North"
 
   Scenario: Enter owner
     Given I am on the enter owner page
-    When I fill in "firstName" with "Jason"
-    And I fill in "lastName" with "Gorman"
-    And I fill in "address" with "10 Downing Street"
-    And I fill in "city" with "London"
-    And I fill in "telephone" with "123456"
-    And I press "Add Owner"
+    When I fill in "First Name" with "Jason"
+    And I fill in "Last Name" with "Gorman"
+    And I fill in "Address" with "Buckingham Palace"
+    And I fill in "City" with "London"
+    And I fill in "Telephone" with "123456"
+    And I fill in "Email" with "jason@gorman.uk"
+    And I fill in "Birth Day" with "1/1/1970"
+    And I press "Save"
     Then an owner should exist with first_name: "Jason", city: "London"
 
