@@ -13,9 +13,6 @@
 <definition extends="default" name="pets/update">
         <put-attribute name="body" value="/WEB-INF/views/pets/update.jspx"/>
     </definition>
-<definition extends="default" name="pets/findPetsByTypeAndNameLike">
-        <put-attribute name="body" value="/WEB-INF/views/pets/findPetsByTypeAndNameLike.jspx"/>
-    </definition>
 <definition extends="default" name="pets/findPetsBySendRemindersAndWeightLessThan">
         <put-attribute name="body" value="/WEB-INF/views/pets/findPetsBySendRemindersAndWeightLessThan.jspx"/>
     </definition>

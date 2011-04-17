@@ -7,6 +7,6 @@
         <field:input field="name" id="c_com_springsource_petclinic_domain_Pet_name" min="1" required="true" z="ZY+k75JeSo9RmejYZRFNIvs2aBg="/>
         <field:input field="weight" id="c_com_springsource_petclinic_domain_Pet_weight" min="0" required="true" validationMessageCode="field_invalid_number" z="cOD5zE/z7gy+RZu5kVSPuxCa+/I="/>
         <field:select field="owner" id="c_com_springsource_petclinic_domain_Pet_owner" itemValue="id" items="${owners}" path="/owners" z="fGzswAP4XXvhPhowJKsRVve929c="/>
-        <field:select field="type" id="c_com_springsource_petclinic_domain_Pet_type" items="${pettypes}" path="pettypes" required="true" z="+hDCnUp+Y+A1RlT+AjH07sgipOo="/>
+        <field:select field="sort" id="c_com_springsource_petclinic_domain_Pet_sort" items="${pettypes}" path="pettypes" required="true" z="b+1Q0LlMyGk3+aeK5uzg70Avys4="/>
     </form:update>
 </div>

@@ -8,7 +8,7 @@
             <table:column id="c_com_springsource_petclinic_domain_Pet_name" property="name" z="G6BvYtcQqJffm1SbxmcOLJ3cVyY="/>
             <table:column id="c_com_springsource_petclinic_domain_Pet_weight" property="weight" z="sDq86anRDnXzji8d7j+tb9X7coI="/>
             <table:column id="c_com_springsource_petclinic_domain_Pet_owner" property="owner" z="JVMVGGcUrASz7s3PRARbLpFTaco="/>
-            <table:column id="c_com_springsource_petclinic_domain_Pet_type" property="type" z="DUgJN4Iq28UVFmg2KaA3V+V98Fw="/>
+            <table:column id="c_com_springsource_petclinic_domain_Pet_sort" property="sort" z="U73mGdL1u4z1BMj8ki6zTQThSxI="/>
         </table:table>
     </page:list>
 </div>

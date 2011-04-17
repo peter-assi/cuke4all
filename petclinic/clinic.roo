@@ -36,7 +36,7 @@ field boolean --fieldName sendReminders --notNull --primitive --class ~.domain.P
 field string --fieldName name --notNull --sizeMin 1
 field number --fieldName weight --type java.lang.Float --notNull --min 0
 field reference --fieldName owner --type ~.domain.Owner
-field enum --fieldName type --type ~.reference.PetType --notNull
+field enum --fieldName sort --type ~.reference.PetType --notNull
 
 field date --fieldName employedSince --type java.util.Calendar --notNull --past --class ~.domain.Vet
 field enum --fieldName specialty --type ~.reference.Specialty --notNull false
@@ -57,10 +57,5 @@ web mvc all --package ~.web
 
 web mvc language --code de
 web mvc language --code es
-
-selenium test --controller ~.web.OwnerController
-selenium test --controller ~.web.PetController
-selenium test --controller ~.web.VetController
-selenium test --controller ~.web.VisitController
 
 logging setup --level INFO

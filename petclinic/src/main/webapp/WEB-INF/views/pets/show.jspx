@@ -7,6 +7,6 @@
         <field:display field="name" id="s_com_springsource_petclinic_domain_Pet_name" object="${pet}" z="jifVeFdVtAczqHwRlAW8gynS40U="/>
         <field:display field="weight" id="s_com_springsource_petclinic_domain_Pet_weight" object="${pet}" z="X/NCCB/JTd6q26u/CFM+giAZ23g="/>
         <field:display field="owner" id="s_com_springsource_petclinic_domain_Pet_owner" object="${pet}" z="gkB4oAjvZoS122eiRb58IhKhNBw="/>
-        <field:display field="type" id="s_com_springsource_petclinic_domain_Pet_type" object="${pet}" z="brGTntbyB66uv79OYo3quRHblKU="/>
+        <field:display field="sort" id="s_com_springsource_petclinic_domain_Pet_sort" object="${pet}" z="OhI91xnEI/MllOPSvh7UsZdWZ/w="/>
     </page:show>
 </div>

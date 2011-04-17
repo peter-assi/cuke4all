@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(:version => 0) do
   create_table "pet", :force => true do |t|
     t.string  "name",                        :null => false
     t.binary  "send_reminders", :limit => 1, :null => false
-    t.integer "type",                        :null => false
+    t.integer "sort",                        :null => false
     t.integer "version"
     t.float   "weight",                      :null => false
     t.integer "owner",          :limit => 8

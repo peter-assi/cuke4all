@@ -42,12 +42,12 @@ privileged aspect Pet_Roo_JavaBean {
         this.owner = owner;
     }
     
-    public PetType Pet.getType() {
-        return this.type;
+    public PetType Pet.getSort() {
+        return this.sort;
     }
     
-    public void Pet.setType(PetType type) {
-        this.type = type;
+    public void Pet.setSort(PetType sort) {
+        this.sort = sort;
     }
     
 }

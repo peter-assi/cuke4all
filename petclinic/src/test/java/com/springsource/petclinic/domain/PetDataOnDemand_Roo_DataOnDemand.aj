@@ -27,7 +27,7 @@ privileged aspect PetDataOnDemand_Roo_DataOnDemand {
         setName(obj, index);
         setWeight(obj, index);
         setOwner(obj, index);
-        setType(obj, index);
+        setSort(obj, index);
         return obj;
     }
     
@@ -51,9 +51,9 @@ privileged aspect PetDataOnDemand_Roo_DataOnDemand {
         obj.setOwner(owner);
     }
     
-    private void PetDataOnDemand.setType(Pet obj, int index) {
-        com.springsource.petclinic.reference.PetType type = com.springsource.petclinic.reference.PetType.class.getEnumConstants()[0];
-        obj.setType(type);
+    private void PetDataOnDemand.setSort(Pet obj, int index) {
+        com.springsource.petclinic.reference.PetType sort = com.springsource.petclinic.reference.PetType.class.getEnumConstants()[0];
+        obj.setSort(sort);
     }
     
     public Pet PetDataOnDemand.getSpecificPet(int index) {

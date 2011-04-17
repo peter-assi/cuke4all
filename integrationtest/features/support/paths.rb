@@ -16,8 +16,10 @@ module NavigationHelpers
       '/petclinic/owners?form'
     when /veterinarians/
       '/petclinic/vets'
-    when /find pets/
-      '/petclinic/pets?find=ByTypeAndNameLike&form'
+    when /list pets/
+      '/petclinic/pets'
+    when /enter pet/
+      '/petclinic/pets?form'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

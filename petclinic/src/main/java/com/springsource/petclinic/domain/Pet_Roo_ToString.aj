@@ -11,7 +11,7 @@ privileged aspect Pet_Roo_ToString {
         StringBuilder sb = new StringBuilder();
         sb.append("Name: ").append(getName()).append(", ");
         sb.append("Owner: ").append(getOwner()).append(", ");
-        sb.append("Type: ").append(getType()).append(", ");
+        sb.append("Sort: ").append(getSort()).append(", ");
         sb.append("Weight: ").append(getWeight()).append(", ");
         sb.append("SendReminders: ").append(isSendReminders());
         return sb.toString();

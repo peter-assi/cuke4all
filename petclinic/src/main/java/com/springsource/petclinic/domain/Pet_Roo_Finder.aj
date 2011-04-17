@@ -5,7 +5,6 @@ package com.springsource.petclinic.domain;
 
 import com.springsource.petclinic.domain.Owner;
 import com.springsource.petclinic.domain.Pet;
-import com.springsource.petclinic.reference.PetType;
 import java.lang.Float;
 import java.lang.String;
 import javax.persistence.EntityManager;
@@ -37,23 +36,6 @@ privileged aspect Pet_Roo_Finder {
         TypedQuery<Pet> q = em.createQuery("SELECT o FROM Pet AS o WHERE o.sendReminders = :sendReminders AND o.weight < :weight", Pet.class);
         q.setParameter("sendReminders", sendReminders);
         q.setParameter("weight", weight);
-        return q;
-    }
-    
-    public static TypedQuery<Pet> Pet.findPetsByTypeAndNameLike(PetType type, String name) {
-        if (type == null) throw new IllegalArgumentException("The type argument is required");
-        if (name == null || name.length() == 0) throw new IllegalArgumentException("The name argument is required");
-        name = name.replace('*', '%');
-        if (name.charAt(0) != '%') {
-            name = "%" + name;
-        }
-        if (name.charAt(name.length() - 1) != '%') {
-            name = name + "%";
-        }
-        EntityManager em = Pet.entityManager();
-        TypedQuery<Pet> q = em.createQuery("SELECT o FROM Pet AS o WHERE o.type = :type AND LOWER(o.name) LIKE LOWER(:name)", Pet.class);
-        q.setParameter("type", type);
-        q.setParameter("name", name);
         return q;
     }
     

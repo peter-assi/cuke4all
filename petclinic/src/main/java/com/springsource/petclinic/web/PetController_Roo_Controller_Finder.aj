@@ -4,7 +4,6 @@
 package com.springsource.petclinic.web;
 
 import com.springsource.petclinic.domain.Owner;
-import com.springsource.petclinic.reference.PetType;
 import java.lang.String;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,12 +25,6 @@ privileged aspect PetController_Roo_Controller_Finder {
     @RequestMapping(params = { "find=BySendRemindersAndWeightLessThan", "form" }, method = RequestMethod.GET)
     public String PetController.findPetsBySendRemindersAndWeightLessThanForm(Model uiModel) {
         return "pets/findPetsBySendRemindersAndWeightLessThan";
-    }
-    
-    @RequestMapping(params = { "find=ByTypeAndNameLike", "form" }, method = RequestMethod.GET)
-    public String PetController.findPetsByTypeAndNameLikeForm(Model uiModel) {
-        uiModel.addAttribute("pettypes", java.util.Arrays.asList(PetType.class.getEnumConstants()));
-        return "pets/findPetsByTypeAndNameLike";
     }
     
 }

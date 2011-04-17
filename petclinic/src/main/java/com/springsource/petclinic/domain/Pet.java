@@ -13,7 +13,7 @@ import javax.persistence.Enumerated;
 
 @RooJavaBean
 @RooToString
-@RooEntity(finders = { "findPetsByNameAndWeight", "findPetsByOwner", "findPetsBySendRemindersAndWeightLessThan", "findPetsByTypeAndNameLike" })
+@RooEntity(finders = { "findPetsByNameAndWeight", "findPetsByOwner", "findPetsBySendRemindersAndWeightLessThan" })
 public class Pet {
 
     @NotNull
@@ -32,5 +32,5 @@ public class Pet {
 
     @NotNull
     @Enumerated
-    private PetType type;
+    private PetType sort;
 }
